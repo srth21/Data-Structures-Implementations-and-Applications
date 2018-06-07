@@ -6,3 +6,4 @@ Applications :
 3.kth Smallest Element
 4.Heap Sort
 5.Sorting a partially sorted array
+6.Connect Ropes at Min Cost
