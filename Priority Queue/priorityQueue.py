@@ -8,22 +8,31 @@ Priority Queue with the following Operations :
 '''
 from arrayMaxHeap import heap
 
+def printElements(heap):
+	for i in range(heap.currSize):
+		print(heap.arr[i])
+
+def makeQueue(n):
+	heapArr=heap(n)
+	return heapArr
 def insert(heap,elements,priorities,n):
 	for i in range(n):
 		#print("before inserting : ",elements[i],heap.val,heap.arr)
 		heap.insert(priorities[i],elements[i])
 		#print("after inserting : ",elements[i],heap.val,heap.arr)
 
-def getHighestPriority():
+def getHighestPriority(heap):
 	priority=heap.getMaximumPriorityFromHeap()
 	val=heap.getMaximumValue()
-	print("Element with value of ",val," has the max priority of ",priority)
+	#print("Element with value of ",val," has the max priority of ",priority)
+	return val,priority
 
-def deleteHighestPriority():
+def deleteHighestPriority(heap):
 	root=heap.extractMax()
 	if(root!=None):
-		print("Element with priority ",root,"deleted.")
-
+		pass
+		#print("Element with priority ",root,"deleted.")
+'''
 elements=[int(i) for i in input().split()]
 priorities=[int(i) for i in input().split()]
 n=len(elements)
@@ -40,4 +49,4 @@ deleteHighestPriority()
 deleteHighestPriority()
 deleteHighestPriority()
 deleteHighestPriority()
-print(heap.arr,heap.val)
+print(heap.arr,heap.val)'''
